@@ -1,0 +1,7 @@
+  /* DMA memory copy */
+  uint32_t chnl_num  = 5 ;          //DMA Channel number
+  unsigned int src = 0xXXXX_XXXX;   // Source Address
+  unsigned int dest = 0xDDDD_DDDD ; // Destination Address
+  unsigned int size = 0;            // byte operation
+  unsigned int num = 1024;          // data length
+  void dma_memory_copy (chnl_num, src, dest, size, num)
