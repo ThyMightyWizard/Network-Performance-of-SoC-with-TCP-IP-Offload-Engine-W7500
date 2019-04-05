@@ -1,9 +1,0 @@
-  // main.c 
-  /* set Sn_RXBUF_SIZE and Sn_RXBUF_SIZE as 8KB */
-  uint8_t tx_size[8] = { 8, 0, 0, 0, 0, 0, 0, 0 };
-  uint8_t rx_size[8] = { 8, 0, 0, 0, 0, 0, 0, 0 };
-
-  ...
-
-  /* Set Network Configuration */
-  wizchip_init(tx_size, rx_size);
