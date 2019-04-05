@@ -1,0 +1,14 @@
+  //W7500x_wztoe.c
+  #define _DEF_ACCESS_DMA_BUF_
+  #ifdef _DEF_ACCESS_DMA_BUF_
+  #include "W7500x_dma.h"
+  #define MAX_TRANSNUM  1024
+  void WIZCHIP_READ_DMA (uint32_t BaseAddr, uint16_t ptr, uint8_t* pBuf, uint16_t len)
+  {
+      /* call void dma_memory_copy () */
+  }
+  void WIZCHIP_WRITE_DMA(uint32_t BaseAddr, uint16_t ptr, uint8_t* pBuf, uint16_t len)
+  {
+      /* call void dma_memory_copy () */
+  }
+  ...
