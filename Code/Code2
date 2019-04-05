@@ -29,4 +29,3 @@ int32_t recvonly_tcps(uint8_t sn, uint8_t* buf, uint16_t port)
      }
      return 1;
 }
-Github file
