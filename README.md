@@ -141,3 +141,29 @@ dma_memory_copy (chnl_num, src, dest, size, num)
 //W7500x_wztoe.c #define _DEF_ACCESS_DMA_BUF_ #ifdef _DEF_ACCESS_DMA_BUF_ #include "W7500x_dma.h" #define MAX_TRANSNUM 1024 void 
 WIZCHIP_READ_DMA (uint32_t BaseAddr, uint16_t ptr, uint8_t* pBuf, uint16_t len) { /* call void dma_memory_copy () */ } void 
 WIZCHIP_WRITE_DMA(uint32_t BaseAddr, uint16_t ptr, uint8_t* pBuf, uint16_t len) { /* call void dma_memory_copy () */ } ...
+
+# How to use Bandwidth Measurement Tool: Iperf
+
+Iperf is a tool to measure maximum TCP bandwidth, allowing the tuning of various parameters and UDP characteristics. Iperf reports bandwidth, delay jitter, datagram loss.
+
+https://iperf.fr/# ex.) host IP(192.168.77.9):port[5000], display format is Mbit/sec, interval 1 sec. >iperf.exe -c 192.168.77.9 -p 5000 -f m -i 1
+
+-c : —client host, -c will connect to the host specified.
+
+-p : —port #, the server port for the server to listen.
+
+-f : —format [], ‘m’ = Mbit/sec
+
+-i : —interval #, Sets the interval time in seconds between periodic bandwidth through performance
+
+Serial terminal for wizwiki_W7500 monitoringPHY is linked. MAC ADDRESS : 00:08:DC:01:02:03 IP ADDRESS : 192.168.077.009 GW ADDRESS : 192.168.077.001 SN MASK: 255.255.255.000 TEST- START 0:Listen, TCP server loopback, port [5000] 0:Connected - 192.168.77.223 : 1110 // <-- dispaly after TCP_Established from Iperf
+
+Excute Iperp on Command Prompt
+
+# Network performances
+
+Analysis of this improvement shows
+
+that the total improvement is due to increasing RX buffer.
+that the total improvement is due to increasing AHB bus Clock.
+that 200% of the total improvement is due to using DMA.
